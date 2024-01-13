@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inquiry</title>
+    <link rel="stylesheet" href="Inquiry.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <img src="img/WebsiteLogo.PNG" class="logo">
+
+            <h1>Enrich every moment.</h1>
+
+            <ul>
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="Product.html">Products</a></li>
+                <li><a href="Workshop.html">Workshops</a></li>
+                <li><a href="Inquiry.html">Inquiry</a></li>
+            </ul>
+
+        </nav>
+
+        <center>
+        <main>
+
+            <h2>Inquiry Page</h2>
+            <img src="img/inquiry.png">
+
+    <br>
+                <div class="container">
+                    <h1>Name:</h1>
+                    <input type="text" value="" name="" id="name" class="info" placeholder="name">
+    <br>
+    <br>
+                    <h1>Email:</h1>
+                    <input type="text" name="" value="" id="email" class="info" placeholder="mail">
+    <br>
+    <br>
+                    <h1>Contact No:</h1>
+                    <input type="text" name="" value="" id="no" class="info" placeholder="+63 123 4567 890">
+    <br>
+    <br>
+                    <h1>Inquiry:</h1>
+                    <textarea name="" id="inquiry" aria-valuetext="" cols="30" rows="10" placeholder="Words" class="info"></textarea>
+    <br>
+    <br>
+                    <input type="button" value="Submit" class="sbutton" onclick="submit()">
+                </div>
+            </div>
+
+ 
+        </main>
+    </center>
+
+    </div>
+
+    <footer>
+        <p>Copyright &copy;2022 Hannah's Cake Shop. Designed By: Ash</p>
+    </footer>
+
+    
+    <script>
+
+        function submit() {
+            
+            var name = document.getElementById("name");
+            var email = document.getElementById("email");
+            var no = document.getElementById("no");
+            var inquiry = document.getElementById("inquiry");
+    
+            if (name.value != ""){
+                if (email.value != "") {
+                    if (no.value != "") {
+                        if (inquiry.value != "") {
+                            alert("Inquiry has been Submitted!!! \n\nName: " + name.value + "\nEmail: " + email.value + "\nNo:" + no.value + "\nInquiry: " + inquiry.value);
+                        }else{alert("Inquiry is Empty");} 
+                    }else{alert("Number is Empty");}
+                }else{alert("Email is Empty");}
+            }else {alert("Name is Empty");} 
+    
+        }
+    </script>
+
+</body>
+</html>
